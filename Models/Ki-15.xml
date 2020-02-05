@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>Ki-15.ac</path>
+
+  <model>
+    <path>Aircraft/K5Y1/Instruments/panel.xml</path>
+    <offsets>
+      <x-m>2.48</x-m>
+      <y-m> 0.00</y-m>
+      <z-m> 0.47</z-m>
+    </offsets>
+    <pitch-deg>20</pitch-deg>
+  </model>
+  
+<nasal>
+	<load>
+	</load>
+ 
+	<unload>
+	</unload>
+</nasal>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>rudder</object-name>
+		<property>surface-positions/rudder-pos-norm</property>
+		<factor>20</factor>
+		<center>
+		<x-m>7.905</x-m>
+		<y-m>0.000000</y-m>
+		<z-m>1.0</z-m>
+		</center>
+		<axis>
+		<x>0.0</x>
+		<y>0.0</y>
+		<z>-1</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>elevator</object-name>
+		<property>surface-positions/elevator-pos-norm</property>
+		<factor>20</factor>
+		<center>
+		<x-m>7.819</x-m>	
+		<y-m>-1.9239</y-m>
+		<z-m>0.12</z-m>
+		</center>
+		<axis>
+		<x>0.0</x>
+		<y>1</y>
+		<z>0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>translate</type>
+		<object-name>wheel.L</object-name>
+		<object-name>spat.L</object-name>
+		<property>gear/gear[0]/compression-m</property>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>wheel.R</object-name>
+		<property>gear/gear[1]/compression-m</property>
+		<center>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+		</center>
+		<axis>
+			<x>0.0</x>
+			<y>0.0</y>
+			<z>1.0</z>
+		</axis>
+	</animation>
+	
+	<animation>
+		<type>spin</type>
+		<object-name>spinner</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+</PropertyList>
