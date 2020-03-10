@@ -1,2 +1,2 @@
 # Ki-15
-FlightGear aircraft Ki-15
+FlightGear aircraft Mitsubishi Ki-15
