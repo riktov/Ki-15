@@ -7,7 +7,7 @@
   <model>
     <path>Aircraft/K5Y1/Instruments/panel.xml</path>
     <offsets>
-      <x-m>2.48</x-m>
+      <x-m>2.9123</x-m>
       <y-m> 0.00</y-m>
       <z-m> 0.47</z-m>
     </offsets>
@@ -103,5 +103,63 @@
 			<y>0</y>
 			<z>0</z>
 		</axis>
+	</animation>
+
+	<animation>
+		<type>spin</type>
+        <object-name>prop-blade-1</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>    
+
+	<animation>
+		<type>spin</type>
+        <object-name>propeller</object-name>
+		<property>engines/engine[0]/rpm</property>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>    
+
+    <animation>
+		<condition>
+			<not>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>0</value>
+				</equals>
+			</not>
+		</condition>
+		<type>select</type>
+		<object-name>pilot-figure</object-name>
+	</animation>
+
+	<animation>
+		<condition>
+			<not>
+				<equals>
+					<property>sim/current-view/view-number</property>
+					<value>1</value>
+				</equals>
+			</not>
+		</condition>
+		<type>select</type>
+		<object-name>navigator-figure</object-name>
 	</animation>
 </PropertyList>
