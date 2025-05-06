@@ -1,0 +1,23 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1.000 1.000 1.000  amb 0.800 0.800 0.800  emis 0.000 0.000 0.000  spec 0.500 0.500 0.500  shi 64 trans 0.000
+OBJECT world
+name "Blender_exporter_v4.2__axis-dual.ac"
+kids 2
+OBJECT poly
+name "axis-orig"
+data 9
+axis-orig
+crease 40.0
+numvert 2
+-1 0 0
+1 0 0
+kids 0
+OBJECT poly
+name "axis.patched"
+data 8
+axis.004
+crease 40.0
+numvert 2
+-1 0 0
+1 0 0
+kids 0

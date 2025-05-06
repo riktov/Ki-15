@@ -2,164 +2,329 @@
 
 <PropertyList>
 
-<path>Ki-15.ac</path>
+    <path>Ki-15.ac</path>
 
-  <model>
-    <path>Aircraft/K5Y1/Instruments/panel.xml</path>
-    <offsets>
-      <x-m>2.9123</x-m>
-      <y-m> 0.00</y-m>
-      <z-m> 0.47</z-m>
-    </offsets>
-    <pitch-deg>20</pitch-deg>
-  </model>
-  
-<nasal>
-	<load>
-	</load>
- 
-	<unload>
-	</unload>
-</nasal>
+    <model>
+        <path>Aircraft/K5Y1/Instruments/panel.xml</path>
+        <offsets>
+        <x-m>2.9123</x-m>
+        <y-m> 0.00</y-m>
+        <z-m> 0.47</z-m>
+        </offsets>
+        <pitch-deg>20</pitch-deg>
+    </model>
 
-	<animation>
-		<type>rotate</type>
-		<object-name>rudder</object-name>
-		<property>surface-positions/rudder-pos-norm</property>
-		<factor>20</factor>
-		<center>
-		<x-m>7.905</x-m>
-		<y-m>0.000000</y-m>
-		<z-m>1.0</z-m>
-		</center>
-		<axis>
-		<x>0.0</x>
-		<y>0.0</y>
-		<z>-1</z>
-		</axis>
-	</animation>
+    <model>
+        <name>pilot</name>
+        <path>Aircraft/Ki-15/Models/Pilot/pilot.xml</path>
+        <offsets>
+            <x-m>3.24</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </offsets> 
+    </model>
 
-	<animation>
-		<type>rotate</type>
-		<object-name>elevator</object-name>
-		<property>surface-positions/elevator-pos-norm</property>
-		<factor>20</factor>
-		<center>
-		<x-m>7.819</x-m>	
-		<y-m>-1.9239</y-m>
-		<z-m>0.12</z-m>
-		</center>
-		<axis>
-		<x>0.0</x>
-		<y>1</y>
-		<z>0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>translate</type>
-		<object-name>wheel.L</object-name>
-		<object-name>spat.L</object-name>
-		<property>gear/gear[0]/compression-m</property>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>0.0</y-m>
-			<z-m>0.0</z-m>
-		</center>
-		<axis>
-			<x>0.0</x>
-			<y>0.0</y>
-			<z>1.0</z>
-		</axis>
-	</animation>
+    <model>
+        <name>navigator</name>
+        <path>Aircraft/Ki-15/Models/Pilot/pilot.xml</path>
+        <offsets>
+            <x-m>4.86</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </offsets> 
+    </model>
+    
+    <nasal>
+        <load>
+        </load>
 
-	<animation>
-		<type>translate</type>
-		<object-name>wheel.R</object-name>
-		<property>gear/gear[1]/compression-m</property>
-		<center>
-			<x-m>0.0</x-m>
-			<y-m>0.0</y-m>
-			<z-m>0.0</z-m>
-		</center>
-		<axis>
-			<x>0.0</x>
-			<y>0.0</y>
-			<z>1.0</z>
-		</axis>
-	</animation>
-	
-	<animation>
-		<type>spin</type>
-		<object-name>spinner</object-name>
-		<property>engines/engine[0]/rpm</property>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>
-
-	<animation>
-		<type>spin</type>
-        <object-name>prop-blade-1</object-name>
-		<property>engines/engine[0]/rpm</property>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>    
-
-	<animation>
-		<type>spin</type>
-        <object-name>propeller</object-name>
-		<property>engines/engine[0]/rpm</property>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-		</center>
-		<axis>
-			<x>-1</x>
-			<y>0</y>
-			<z>0</z>
-		</axis>
-	</animation>    
+        <unload>
+        </unload>
+    </nasal>
 
     <animation>
-		<condition>
-			<not>
-				<equals>
-					<property>sim/current-view/view-number</property>
-					<value>0</value>
-				</equals>
-			</not>
-		</condition>
-		<type>select</type>
-		<object-name>pilot-figure</object-name>
-	</animation>
+        <type>rotate</type>
+        <object-name>rudder</object-name>
+        <property>surface-positions/rudder-pos-norm</property>
+        <factor>20</factor>
+        <center>
+        <x-m>7.905</x-m>
+        <y-m>0.000000</y-m>
+        <z-m>1.0</z-m>
+        </center>
+        <axis>
+        <x>0.0</x>
+        <y>0.0</y>
+        <z>-1</z>
+        </axis>
+    </animation>
 
-	<animation>
-		<condition>
-			<not>
-				<equals>
-					<property>sim/current-view/view-number</property>
-					<value>1</value>
-				</equals>
-			</not>
-		</condition>
-		<type>select</type>
-		<object-name>navigator-figure</object-name>
-	</animation>
+    <animation>
+        <type>rotate</type>
+        <object-name>elevator</object-name>
+        <property>surface-positions/elevator-pos-norm</property>
+        <factor>20</factor>
+        <center>
+            <x-m>7.819</x-m>	
+            <y-m>0</y-m>
+            <z-m>0.12</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>aileron.L</object-name>
+        <property>surface-positions/left-aileron-pos-norm</property>
+        <factor>-18.0</factor>
+        <center>
+            <x-m>3.4727</x-m>
+            <y-m>-3.8770</y-m>
+            <z-m>-0.2204</z-m>
+        </center>
+        <axis>
+            <x>-0.206</x>
+            <y>-2.9316</y>
+            <z>0.3602</z>
+        </axis>
+    </animation>  
+    
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>aileron.R</object-name>
+        <property>surface-positions/right-aileron-pos-norm</property>
+        <factor>18.0</factor>
+        <center>
+            <x-m>3.4727</x-m>
+            <y-m>3.8770</y-m>
+            <z-m>-0.2204</z-m>
+        </center>
+        <axis>
+            <x>-0.206</x>
+            <y>2.9316</y>
+            <z>0.3602</z>
+        </axis>
+    </animation> 
+    
+    <animation>
+        <type>translate</type>
+        <object-name>wheel.L</object-name>
+        <object-name>spat.L</object-name>
+        <property>gear/gear[0]/compression-m</property>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>translate</type>
+        <object-name>wheel.R</object-name>
+        <property>gear/gear[1]/compression-m</property>
+        <center>
+            <x-m>0.0</x-m>
+            <y-m>0.0</y-m>
+            <z-m>0.0</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>1.0</z>
+        </axis>
+    </animation>
+    
+    <!-- Prop spin effects -->
+
+    <animation>
+        <type>spin</type>
+        <object-name>spinner</object-name>
+        <object-name>prop-blade.1</object-name>
+        <object-name>prop-blade.2</object-name>
+        <property>engines/engine[0]/rpm</property>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>    
+
+    <animation>
+        <type>select</type>
+        <object-name>prop-blade.1</object-name>
+        <object-name>prop-blade.2</object-name>
+        <condition>
+            <less-than>
+                <property>engines/engine[0]/rpm</property>
+                <value>400</value>
+            </less-than>
+        </condition>
+    </animation>
+    
+    <animation>
+        <type>select</type>
+        <object-name>prop-blur</object-name>
+        <condition>
+            <greater-than>
+                <property>engines/engine[0]/rpm</property>
+                <value>399</value>
+            </greater-than>
+<!--            <less-than>
+                <property>engines/engine[0]/rpm</property>
+                <value>2000</value>
+            </less-than>-->
+        </condition>
+    </animation>
+
+    <animation>
+        <type>spin</type>
+        <object-name>prop-blur</object-name>
+        <property>engines/engine[0]/rpm</property>
+        <factor>0.05</factor>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>   
+    
+    <animation>
+        <type>select</type>
+        <object-name>prop-disc</object-name>
+        <condition>
+            <greater-than>
+                <property>engines/engine[0]/rpm</property>
+                <value>1999</value>
+            </greater-than>
+        </condition>
+    </animation>    
+ 
+    <!-- double-hinged canopy -->
+    <!--
+    When using named object as axis, add the following to .ac
+    
+numsurf 1
+SURF 0x12
+mat 0
+refs 2
+0 0 0
+1 0 0
+    
+    https://wiki.flightgear.org/Howto:Animate_models#Using_a_geometry_object_for_axis_and_centre_.282017.2.29
+    -->
+    
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>canopy-panel-hinged</object-name>
+        <property>sim/model/canopy/hinged/angle</property>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0.25</y-m>
+            <z-m>0.6</z-m>
+        </center>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>     
+
+<!--    <animation>
+        <type>rotate</type>
+        <object-name>canopy-panel-tracked</object-name>
+        <property>sim/model/canopy/tracked/angle</property>
+        <center>
+            <x-m>0</x-m>
+            <y-m>-0.25</y-m>
+            <z-m>0.60</z-m>
+        </center>        
+        
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation> --> 
+
+    <animation>
+        <type>translate</type>
+        <object-name>canopy-panel-tracked</object-name>
+        <object-name>canopy-panel-tracked-axis</object-name>
+        <property>sim/model/canopy/tracked/x</property>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>  
+
+    <animation>
+        <type>translate</type>
+        <object-name>canopy-panel-tracked</object-name>
+        <object-name>canopy-panel-tracked-axis</object-name>
+        <property>sim/model/canopy/tracked/y</property>
+        <axis>
+            <x>0</x>
+            <y>0</y>
+            <z>1</z>
+        </axis>
+    </animation> 
+
+    <animation>
+        <type>rotate</type>
+        <object-name>canopy-panel-tracked</object-name>
+        <property>sim/model/canopy/tracked/angle</property>
+        <axis>
+            <object-name>canopy-panel-tracked-axis</object-name> 
+        </axis>
+    </animation>  
+
+    
+    <!-- pilot figures -->
+<!--    <animation>
+        <condition>
+            <not>
+                <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>0</value>
+                </equals>
+            </not>
+        </condition>
+        <type>select</type>
+        <object-name>pilot-figure</object-name>
+    </animation>
+
+    <animation>
+        <condition>
+            <not>
+                <equals>
+                    <property>sim/current-view/view-number</property>
+                    <value>1</value>
+                </equals>
+            </not>
+        </condition>
+        <type>select</type>
+        <object-name>navigator-figure</object-name>
+    </animation>-->
 </PropertyList>

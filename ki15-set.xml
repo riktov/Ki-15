@@ -279,13 +279,14 @@
     </instrumentation>
 
     <nasal>
-        <simoun>
+        <Ki15> <!-- Nasal namespace can not have hyphen -->
 			<file>Aircraft/Simoun/Nasal/systems.nas</file>
 <!--
 			<file>Aircraft/Simoun/Nasal/liveries.nas</file>
 			<file>Aircraft/BN-2/Nasal/electrical.nas</file>
 -->
-		</simoun>
+			<file>Aircraft/Ki-15/Nasal/canopy.nas</file>
+        </Ki15>
     </nasal>
 
     <input>
@@ -298,6 +299,16 @@
                     <script>aerostar.ap_settings.toggle()</script>
                 </binding>
             </key>
+            
+            <key n="67">
+                <name>C</name>
+                <desc>Toggle Canopy</desc>
+                <binding>
+                    <command>nasal</command>
+                    <script>Ki15.canopy.toggle()</script>
+                </binding>
+            </key>
+         
         </keyboard>
     </input>
 
